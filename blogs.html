@@ -1,0 +1,42 @@
+---
+layout: default
+title: Blogs
+navbar_title: Blogs
+---
+<style>
+    .blog-title {
+        color: black;
+        font-size: 24px;
+        display: block;
+        margin-bottom: 16px;
+        text-decoration: none;
+        padding-bottom: 10px;
+        /* Adds space below each blog title */
+    }
+
+    .blog-title:hover {
+        text-decoration: underline;
+        /* Adds underline on hover */
+    }
+
+    .blog-item {
+        margin-bottom: 30px;
+        /* Space between blog items */
+        border-bottom: 1px solid #e0e0e0;
+        /* Light grey dividing line */
+        padding-bottom: 10px;
+        /* Space between the title and the line */
+    }
+</style>
+
+<h1>Blogs</h1>
+<br>
+<br>
+
+<div>
+    {% for blog in site.blogs %}
+    <div class="blog-item">
+        <a class="blog-title" href="{{ blog.url }}">{{ blog.title }}</a>
+    </div>
+    {% endfor %}
+</div>

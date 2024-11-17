@@ -1,0 +1,49 @@
+---
+layout: default
+title: Projects
+navbar_title: Projects
+---
+<style>
+    .project-title {
+        color: black;
+        font-size: 24px;
+        display: block;
+        margin-bottom: 16px;
+        text-decoration: none;
+        padding-bottom: 10px;
+        /* Adds space below each project title */
+    }
+
+    .project-title:hover {
+        text-decoration: underline;
+        /* Adds underline on hover */
+    }
+
+    .project-item {
+        margin-bottom: 30px;
+        /* Space between projects */
+        border-bottom: 1px solid #e0e0e0;
+        /* Light grey dividing line */
+        padding-bottom: 10px;
+        /* Space between the title and the line */
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid #e0e0e0;
+        margin: 20px 0;
+        /* Space above and below the line */
+    }
+</style>
+
+<h1>Projects</h1>
+<br>
+<br>
+
+<div>
+    {% for projects in site.projects %}
+    <div class="project-item">
+        <a class="project-title" href="{{ projects.url }}">{{ projects.title }}</a>
+    </div>
+    {% endfor %}
+</div>
